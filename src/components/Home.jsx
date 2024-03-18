@@ -1,0 +1,97 @@
+import React from "react";
+import stress from "../assets/img/stressImg.jpg";
+import thinking from "../assets/img/thinking.png";
+import depression from "../assets/img/depression1.png";
+import about from '../assets/img/aboutus.jpg'
+import Moreinfo from "./Moreinfo";
+import { NavLink } from "react-router-dom";
+
+const Home = () => {
+  return (
+    <>
+      <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 mr-10 ml-10">
+        <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold">
+          WHAT IS MEANTAL HEALTH?
+        </h1>
+      </div>
+
+      <div className="flex mt-5 mx-[8%] gap-12 flex-col md:flex-row">
+        <div className="">
+          <img src={stress} alt="stress" className=" rounded mt-0" />
+          <h2 className="text-center text-3xl font-bold my-7">Stress</h2>
+          <p className="leading-7 text-lg">
+            Stress can be defined as any type of change that causes physical,
+            emotional, or psychological strain. Stress is your body’s response
+            to anything that requires attention or action. Everyone experiences
+            stress to some degree. The way you respond to stress, however, makes
+            a big difference to your overall well-being.it creates difficulty
+            breathing ,panic attacks,sleep problems ,chest pains and high blood
+            pressure etc.
+          </p>
+        </div>
+
+        <div className="">
+          <img src={thinking} alt="stress" className=" mr-[5%] mt-0 " />
+          <h2 className="text-center text-3xl font-bold mt-4 md:mt-[8rem] mb-7">Overthinking</h2>
+          <p className="leading-7 text-lg">
+            Overthinking is defined as “a loop of unproductive thoughts” or “an
+            excessive amount of thoughts that are unnecessary.” Overthinking can
+            be harmful to our emotional health, especially when it’s directed at
+            unwanted, spontaneous, negative thoughts, images, or memories.
+            Fortunately, we can learn to curb this unhelpful way of thinking
+            through greater self-awareness and the practice of mental
+            disengagement.
+          </p>
+         
+        </div>
+
+        <div className="">
+          <img src={depression} alt="stress" className=" rounded" />
+          <h2 className="text-center text-3xl font-bold my-5">Depression</h2>
+          <p className="leading-7 text-lg">
+            Depression (major depressive disorder) is a common and serious
+            medical illness that negatively affects how you feel, the way you
+            think and how you act. Fortunately, it is also treatable. Depression
+            causes feelings of sadness and/or a loss of interest in activities
+            you once enjoyed. It can lead to a variety of emotional and physical
+            problems and can decrease your ability to function at work and at
+            home.
+          </p>
+        </div>
+    
+      </div>
+
+        <div className="flex justify-center mt-8 "> 
+         <NavLink to='/moreinfo'><button className="border-2 border-black bg-green-200 py-3 px-4 rounded-lg font-bold  text-orange-500">More infomation</button></NavLink>
+          </div>
+    
+<div className="flex  mt-8 gap-20 ml-5 md:flex-row flex-col">
+           <div className="flex mt-7 justify-center flex-col  md:w-[50%] w-full">
+            <h1  className="text-3xl font-semibold text-center">About us</h1>
+            <p className="text-left mx-2 lg:ms-[6rem] mt-4 leading-7 text-xl"> TeenTherapy provides the best online therapy and counselling for teenagers,
+               children, adolescents, young & youth in India. 
+               We provide certified & qualified psychologists who specialize in child &
+                adolescent psychology. Consult India’s top Child Psychologists & 
+                Mental Health Therapists for Teenagers and adolescents.
+                 Therapy for your child, teen, adolescent, young people, parents and family counselling.</p>
+                
+           </div>
+           <figure className="lg:w-[30%] lg:mt-5 mx-2 w-[90%] ">
+                 <img src={about} alt="" style={{border:'2px solid black'}} className="rounded" />
+                 </figure>
+           </div>
+
+           <div className="flex justify-center mt-10 mb-5"> 
+          <button className="border-2 border-black bg-green-100 py-3 px-4 rounded-lg font-bold  text-green-900">Book Appointment Now</button>
+          </div>
+
+      {/* <div className='flex justify-center mt-3'>
+      <h2> stress</h2>
+      <h2> stress</h2>
+      <h2> stress</h2>
+    </div> */}
+    </>
+  );
+};
+
+export default Home;
