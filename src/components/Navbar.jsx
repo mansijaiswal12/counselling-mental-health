@@ -39,8 +39,8 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   
-                  <h1 className=" text-orange-500 font-bold text-3xl ">
-                   Consulting
+                  <h1 className=" text-green-500 font-bold text-4xl  mr-8 animate__animated animate__headShake ">
+                    <span className='text-5xl'> C</span>onsulting 
                   </h1>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
@@ -53,8 +53,8 @@ export default function Navbar() {
                       to={item.Link}
                       className={classNames(
                           item.current ? 
-                          ' text-red-500' : 'text-red-500 hover:bg-blue-500 hover:text-white',
-                          'rounded-md px-3 py-2  font-medium text-base'
+                          ' text-black-900 ' : 'text-black-900  hover:bg-[#22C55E] hover:text-white',
+                          'rounded-md px-3 py-2  font-bold text-xl'
                         )}
                         aria-current={item.current ? 'page' : undefined}>
                         {item.name}
@@ -64,14 +64,7 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* <button
-                  type="button"
-                  className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">View notifications</span>
-            
-                </button> */}
+             
 
               
                 <Menu as="div" className="relative ml-3">
@@ -79,7 +72,7 @@ export default function Navbar() {
                     <Menu.Button className="relative flex rounded-full bg-[#B7E7EA] text-sm ">
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                      <i className='text-2xl text-orange-500'>
+                      <i className='text-2xl text-[#22C55E]'>
                       <FaUser />
                       </i>
 
