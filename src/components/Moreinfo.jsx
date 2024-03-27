@@ -4,7 +4,7 @@ const Moreinfo = () => {
   return (
     <>
         <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 mr-10 ml-10">
-        <h1 className=" flex justify-center text-4xl flex-wrap  flex font-bold">
+        <h1 className=" flex justify-center text-4xl flex-wrap  font-bold">
           WHAT IS MEANTAL HEALTH?
         </h1>
       </div>
