@@ -1,5 +1,5 @@
 // import React from 'react'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 
 // const ContactForm = () => {
@@ -51,31 +51,42 @@ import { useState } from 'react'
   }
   ```
 */
-export default function Example() {
+import { useState } from 'react'
+import axios from 'axios'
+import {ToastContainer,toast} from 'react-toastify'
+
+export default function ContactForm() {
+  const [name,setname] = useState("")
+  const [mobileno,setmobno] = useState('')
+  const [email,setemail] = useState('')
+  const [date,setdate] = useState('')
+  const [time,settime] =useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(name,mobileno,email,date,time)
+    axios.post("http://localhost:8080/contactus",{name,email,mobileno,date,time})
+    .then((result) => {
+      console.log(result)
+      toast.success("successfully submited")
+    })
+    .catch((err) =>
+    console.log(err)
+      )
+  }
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
+      
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="mx-auto h-10 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
-          />
+         
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign in to your account
+            Contact Us
           </h2>
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6"  onSubmit={handleSubmit} method="POST">
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                 enter your name
@@ -85,6 +96,8 @@ export default function Example() {
                   id="Name"
                   name="Name"
                   type="text"
+                  value={name}
+                  onChange={(e) => setname(e.target.value)}
                  
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -100,6 +113,9 @@ export default function Example() {
                   id="email"
                   name="email"
                   type="email"
+                  value={email}
+                  onChange={(e) => setemail(e.target.value)}
+                 
                  
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -116,26 +132,14 @@ export default function Example() {
                   id="number"
                   name="number"
                   type="text"
-                 
+                  value={mobileno}
+                  onChange={(e) => setmobno(e.target.value)}
+                  
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <div>
               <div className="flex items-center justify-between">
@@ -149,6 +153,8 @@ export default function Example() {
                   id="date"
                   name="date"
                   type="date"
+                  value={date}
+                  onChange={(e) => setdate(e.target.value)}
                   
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"

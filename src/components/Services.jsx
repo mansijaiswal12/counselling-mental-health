@@ -23,7 +23,7 @@ const Services = () => {
               But what is stress? Why has it become so common? Why are 
               online counselling centers increasing to help people with stress issues?.</p>
               <div className="flex justify-center mt-6 mb-5"> 
-         <NavLink to='/explorestress'> <button className="border-2 border-black bg-green-100 py-3 px-4 rounded-lg font-bold  text-black-900">Explore</button></NavLink>
+         <NavLink to='/explorestress'> <button className="border-2 border-black bg-[#22C55E] py-3 px-4 rounded-lg font-bold  text-black-900">Explore</button></NavLink>
           </div>
                 
            </div>
@@ -45,7 +45,7 @@ const Services = () => {
 
 </p>
               <div className="flex justify-center mt-6 mb-5"> 
-          <button className="border-2 border-black bg-green-100 py-3 px-4 rounded-lg font-bold  text-black-900">Explore</button>
+       <NavLink to='/exploroverthinking'>  <button className="border-2 border-black bg-[#22C55E] py-3 px-4 rounded-lg font-bold  text-black-900">Explore</button></NavLink> 
           </div>
                 
            </div>
@@ -65,7 +65,7 @@ const Services = () => {
             <h1  className="text-3xl font-semibold text-center">Solution of Stress</h1>
             <p className="text-left mx-2 lg:ms-[6rem] mt-4 leading-7 text-xl font-bold">Depression Counselling is one of the many effective tools of the modern world that helps in fighting the most common form of mental illness known as depression. This form of therapy helps individuals to reflect on their emotional state and yet be efficient in their day to day life. Online Counselling has come as a lifesaver as you can consult a psychologist online from the comforts of your home.</p>
               <div className="flex justify-center mt-6 mb-5"> 
-          <button className="border-2 border-black bg-green-100 py-3 px-4 rounded-lg font-bold  text-black-900">Explore</button>
+          <button className="border-2 border-black bg-[#22C55E] py-3 px-4 rounded-lg font-bold  text-black-900">Explore</button>
           </div>
                 
            </div>

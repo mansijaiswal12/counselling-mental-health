@@ -8,8 +8,8 @@ import Aboutus from './components/Aboutus'
 import Feedback from './components/Feedback'
 import Moreinfo from './components/Moreinfo'
 import Explorestress from './components/Explorestress'
-
-
+import 'animate.css'
+import Exploreoverthinking from './components/Exploreoverthinking'
 
 
 
@@ -28,6 +28,7 @@ const App = () => {
         <Route path='/moreinfo' element={<Moreinfo/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/explorestress' element={<Explorestress/>}/>
+        <Route path='/exploroverthinking' element={<Exploreoverthinking/>}/>
        
          
        

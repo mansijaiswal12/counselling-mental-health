@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#allbtn:hover{
+background: rgb(158, 239, 239);
+    
+}

@@ -32,13 +32,17 @@ const Aboutus = () => {
               <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold
                animate__animated animate__tada"  >
                 TALK TO US
-             </h1> 
-             <p >Have any questions? We are always open to talk about your counselor</p>
-             <div className="flex justify-center mt-8 "> 
-         <button className="border-2 border-black bg-green-200 py-3 px-4 rounded-lg font-bold  text-orange-500">More infomation</button>
-          </div>
-    
+             </h1>
+            
             </div>
+            <div className= 'flex justify-center flex-wrap bg-[#b0e2e6]  mr-8 ml-8 mb-5 '>
+             <p  className='text-xl mb-8 font-bold'>Have any questions? We are always open to talk about your counselor</p>
+             </div>
+             <div className="flex justify-center flex-wrap]  mr-8 ml-8 "> 
+          <button className="border-2 border-black bg-[#3FCC73] py-2 px-2 rounded-lg font-bold  text-black-900 mb-5">Book Appointment Now</button>
+          </div>
+
+             
 
           
       

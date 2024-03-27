@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 mr-10 ml-10">
-        <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold">
+        <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold animate__animated animate__bounceIn --animation-duration:3s;">
           WHAT IS MEANTAL HEALTH?
         </h1>
       </div>
@@ -62,7 +62,7 @@ const Home = () => {
       </div>
 
         <div className="flex justify-center mt-8 "> 
-         <NavLink to='/moreinfo'><button className="border-2 border-black bg-green-200 py-3 px-4 rounded-lg font-bold  text-orange-500">More infomation</button></NavLink>
+         <NavLink to='/moreinfo'><button className="border-2 border-black bg-[#22C55E] py-3 px-4 rounded-lg font-bold  text-black-500" id="allbtn">More infomation</button></NavLink>
           </div>
     
 <div className="flex  mt-8 gap-20 ml-5 md:flex-row flex-col">
@@ -82,7 +82,7 @@ const Home = () => {
            </div>
 
            <div className="flex justify-center mt-10 mb-5"> 
-          <button className="border-2 border-black bg-green-100 py-3 px-4 rounded-lg font-bold  text-green-900">Book Appointment Now</button>
+          <button className="border-2 border-black bg-[#22C55E] py-3 px-4 rounded-lg font-bold  text-black-900" id="allbtn">Book Appointment Now</button>
           </div>
 
       {/* <div className='flex justify-center mt-3'>
