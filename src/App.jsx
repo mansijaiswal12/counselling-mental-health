@@ -10,6 +10,7 @@ import Moreinfo from './components/Moreinfo'
 import Explorestress from './components/Explorestress'
 import 'animate.css'
 import Exploreoverthinking from './components/Exploreoverthinking'
+import Exploredepression from './components/Exploredepression'
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='/services' element={<Services/>}/>
         <Route path='/explorestress' element={<Explorestress/>}/>
         <Route path='/exploroverthinking' element={<Exploreoverthinking/>}/>
+        <Route path='/exploredepression' element={<Exploredepression/>}/>
        
          
        
