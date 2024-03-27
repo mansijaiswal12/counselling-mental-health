@@ -12,7 +12,7 @@ const Home = () => {
       <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 mr-10 ml-10">
         <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold animate__animated animate__bounceIn --animation-duration:3s;">
         WHAT IS MEANTAL HEALTH?
-        </h1>bgfgbrbgrbgr
+        </h1>
       </div>
 
       <div className="flex mt-5 mx-[8%] gap-12 flex-col md:flex-row">
