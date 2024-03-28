@@ -67,7 +67,7 @@ const Home = () => {
     
 <div className="flex  mt-8 gap-20 ml-5 md:flex-row flex-col">
            <div className="flex mt-7 justify-center flex-col  md:w-[50%] w-full">
-            <h1  className="text-3xl font-semibold text-center">About us</h1>
+            <h1  className="text-3xl font-bold text-center">About us</h1>
             <p className="text-left mx-2 lg:ms-[6rem] mt-4 leading-7 text-xl"> TeenTherapy provides the best online therapy and counselling for teenagers,
                children, adolescents, young & youth in India. 
                We provide certified & qualified psychologists who specialize in child &
