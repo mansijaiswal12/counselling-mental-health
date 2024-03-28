@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 #allbtn:hover{
-background: rgb(158, 239, 239);
+background: rgb(80, 229, 229);
     
+}
+#contact:hover{
+    background: rgb(91, 138, 138);
+}
+
+.bgimage{
+    background-image: url("../src/assets/img/c5.jpg");
+    border-radius: 3rem solid black;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+
+
 }
