@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 import { FaUser } from "react-icons/fa";
 
 const navigation = [
-  { name: 'Home', Link:"/", current: true },
+  { name: 'Home', Link:"/", current: false },
   { name: 'Services', Link:"/services", current: false },
   { name: 'Aboutus', Link:"/aboutus", current: false },
   { name: 'ContactUs', Link:"/contactus", current: false },
