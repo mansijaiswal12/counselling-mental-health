@@ -1,5 +1,6 @@
 import React from 'react'
 import goals from '../assets/img/goals.jpg'
+import { NavLink } from 'react-router-dom'
 
 const Aboutus = () => {
   return (
@@ -39,7 +40,7 @@ const Aboutus = () => {
              <p  className='text-xl mb-8 font-bold'>Have any questions? We are always open to talk about your counselor</p>
              </div>
              <div className="flex justify-center flex-wrap]  mr-8 ml-8 "> 
-          <button className="border-2 border-black bg-[#3FCC73] py-2 px-2 rounded-lg font-bold  text-black-900 mb-5" id='allbtn'>Book Appointment Now</button>
+          <NavLink to="/contactus"><button className="border-2 border-black bg-[#3FCC73] py-2 px-2 rounded-lg font-bold  text-black-900 mb-5" id='allbtn'>Book Appointment Now</button></NavLink>
           </div>
 
              
