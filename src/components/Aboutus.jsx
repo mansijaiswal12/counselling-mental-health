@@ -1,16 +1,17 @@
 import React from 'react'
 import goals from '../assets/img/goals.jpg'
-import { NavLink } from 'react-router-dom'
+
 
 const Aboutus = () => {
   return (
-    <>
+    <> 
       <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 mr-8 ml-8">
         <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold
           animate__animated animate__tada"  >
           Who We Are?
-        </h1>
+        2</h1>
       </div>
+      <p></p>
 
       <div className="flex  mt-8 gap-20 ml-8 mr-8 md:flex-row flex-col" >
            <div className="flex mt-7 justify-center flex-col  md:w-[50%] w-full">
@@ -34,16 +35,8 @@ const Aboutus = () => {
                animate__animated animate__tada"  >
                 TALK TO US
              </h1>
-            
+             <button></button>
             </div>
-            <div className= 'flex justify-center flex-wrap bg-[#b0e2e6]  mr-8 ml-8 mb-5 '>
-             <p  className='text-xl mb-8 font-bold'>Have any questions? We are always open to talk about your counselor</p>
-             </div>
-             <div className="flex justify-center flex-wrap]  mr-8 ml-8 "> 
-          <NavLink to="/contactus"><button className="border-2 border-black bg-[#3FCC73] py-2 px-2 rounded-lg font-bold  text-black-900 mb-5" id='allbtn'>Book Appointment Now</button></NavLink>
-          </div>
-
-             
 
           
       
