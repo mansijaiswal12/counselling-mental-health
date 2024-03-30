@@ -2,19 +2,27 @@ import React from 'react'
 import solstress from '../assets/img/stress_sol.jpg'
 import soloverthinking from '../assets/img/sol_overthinking.jpg'
 import soldepression from '../assets/img/sol_depression.jpg'
+import { motion } from "framer-motion";
 import { NavLink } from 'react-router-dom'
 
 const Services = () => {
   return (
-    <>
-      <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 mr-10 ml-10">
-        <h1 className=" flex justify-center text-4xl flex-wrap font-bold animate__animated animate__bounceIn ">
+    <motion.main
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1}}
+    transition={{
+      duration: 0.8,
+      delay: 0.5,
+      easeIn: [0, 0.71, 0.2, 1.01]
+    }}>
+      <div className=" mt-3 flex justify-center flex-wrap bg-[#b0e2e6]  py-10 sm:mr-10 sm:ml-10">
+        <h1 className=" flex justify-center text-4xl flex-wrap font-bold ">
           Services
         </h1>
       </div>
-
+    
       <div>
-      <div className="flex  mt-8 gap-20 ml-5 md:flex-row flex-col">
+      <div className="flex  sm:mt-8 gap-20 ml-5 md:flex-row flex-col">
            <div className="flex mt-7 justify-center flex-col  md:w-[50%] w-full">
             <h1  className="text-3xl font-semibold text-center">Solution of Stress</h1>
             <p className="text-left mx-2 lg:ms-[6rem] mt-4 leading-7 text-xl font-bold"> Stress, one of the most commonly
@@ -78,8 +86,7 @@ const Services = () => {
       </div>
 
 
-
-    </>
+    </motion.main>
   )
 }
 

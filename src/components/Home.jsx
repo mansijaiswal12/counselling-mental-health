@@ -9,8 +9,8 @@ import { NavLink } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 mr-10 ml-10">
-        <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold animate__animated animate__bounceIn --animation-duration:3s;">
+      <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10  sm:mr-10  sm:ml-10">
+        <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold ">
         WHAT IS MEANTAL HEALTH?
         </h1>
       </div>

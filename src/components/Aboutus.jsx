@@ -1,17 +1,16 @@
 import React from 'react'
 import goals from '../assets/img/goals.jpg'
-
+import { NavLink } from 'react-router-dom'
 
 const Aboutus = () => {
   return (
-    <> 
-      <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 mr-8 ml-8">
-        <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold
-          animate__animated animate__tada"  >
+    <>
+      <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 sm:mr-8 sm:ml-8">
+        <h1 className=" flex justify-center text-3xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold
+          "  >
           Who We Are?
-        2</h1>
+        </h1>
       </div>
-      <p></p>
 
       <div className="flex  mt-8 gap-20 ml-8 mr-8 md:flex-row flex-col" >
            <div className="flex mt-7 justify-center flex-col  md:w-[50%] w-full">
@@ -30,13 +29,21 @@ const Aboutus = () => {
                  <img src={goals} alt="" style={{border:'2px solid black'}} className="rounded" />
                  </figure>
            </div>
-           <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 mr-8 ml-8">
-              <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold
-               animate__animated animate__tada"  >
+           <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 sm:mr-8 sm:ml-8">
+              <h1 className=" flex justify-center text-3xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold
+               "  >
                 TALK TO US
              </h1>
-             <button></button>
+            
             </div>
+            <div className= 'flex justify-center flex-wrap bg-[#b0e2e6] sm:mr-8 sm:ml-8 mb-5 '>
+             <p  className='sm:text-xl mb-8 font-bold sm:ms-2 px-5 '>Have any questions? We are always open to talk about your counselor</p>
+             </div>
+             <div className="flex justify-center flex-wrap]  mr-8 ml-8 "> 
+          <NavLink to="/contactus"><button className="border-2 border-black bg-[#3FCC73] py-2 px-2 rounded-lg font-bold  text-black-900 mb-5" id='allbtn'>Book Appointment Now</button></NavLink>
+          </div>
+
+             
 
           
       
