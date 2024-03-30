@@ -3,12 +3,19 @@ import stress from "../assets/img/stressImg.jpg";
 import thinking from "../assets/img/thinking.png";
 import depression from "../assets/img/depression1.png";
 import about from '../assets/img/aboutus.jpg'
-import Moreinfo from "./Moreinfo";
 import { NavLink } from "react-router-dom";
-
+import { motion } from "framer-motion";
 const Home = () => {
   return (
-    <>
+    <motion.main
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1}}
+    transition={{
+      duration: 0.8,
+      delay: 0.5,
+      easeIn: [0, 0.71, 0.2, 1.01]
+    }}>
+
       <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10  sm:mr-10  sm:ml-10">
         <h1 className=" flex justify-center text-xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold ">
         WHAT IS MEANTAL HEALTH?
@@ -90,7 +97,7 @@ const Home = () => {
       <h2> stress</h2>
       <h2> stress</h2>
     </div> */}
-    </>
+    </motion.main>
   );
 };
 
