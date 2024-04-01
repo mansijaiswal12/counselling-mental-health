@@ -27,7 +27,7 @@ export default function FeedbackForm() {
     e.preventDefault();
     console.log(name, comments, rating, therapyNames);
 
-    axios.post("http://localhost:8080/feedback", { name, comments, rating, therapyNames })
+    axios.post("http://localhost:8000/feedback", { name, comments, rating, therapyNames })
       .then((result) => {
         console.log(result);
         toast.success("Thank you for your feedback");
@@ -85,7 +85,7 @@ export default function FeedbackForm() {
                     
                   }}
                   required
-                  
+
                   className="block w-full rounded-md border-0 py-1.5  px-2 font-bold text-gray-900 shadow-sm ring-2 ring-inset  ring-green-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
                 />
               </div>
