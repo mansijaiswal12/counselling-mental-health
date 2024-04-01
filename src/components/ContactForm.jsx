@@ -164,6 +164,7 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </main>
   );
 }

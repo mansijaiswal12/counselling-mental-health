@@ -82,9 +82,11 @@ export default function FeedbackForm() {
                   value={comments}
                   onChange={(e) => {
                     setcomments(e.target.value);
+                    
                   }}
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset  ring-green-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
+                  
+                  className="block w-full rounded-md border-0 py-1.5  px-2 font-bold text-gray-900 shadow-sm ring-2 ring-inset  ring-green-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
