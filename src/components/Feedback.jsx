@@ -4,6 +4,7 @@ import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Star from "./Star";
+const link = 'https://counselling-mental-health-backend.onrender.com'
 
 export default function FeedbackForm() {
   const [name, setname] = useState("");
@@ -27,7 +28,7 @@ export default function FeedbackForm() {
     e.preventDefault();
     console.log(name, comments, rating, therapyNames);
 
-    axios.post("http://localhost:8000/feedback", { name, comments, rating, therapyNames })
+    axios.post(`${link}/feedback`, { name, comments, rating, therapyNames })
       .then((result) => {
         console.log(result);
         toast.success("Thank you for your feedback");

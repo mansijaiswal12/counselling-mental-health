@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+const link = "https://counselling-mental-health-backend.onrender.com"
 
 export default function ContactForm() {
   const [name, setname] = useState("");
@@ -13,7 +14,7 @@ export default function ContactForm() {
     e.preventDefault();
     console.log(name, mobileno, email, date, time);
     axios
-      .post("http://localhost:8000/contactus", {
+      .post(`${link}/contactus`, {
         name,
         email,
         mobileno,
