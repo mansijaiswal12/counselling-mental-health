@@ -37,7 +37,7 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   
-                  <h1 className=" underline text-green-500 font-bold text-4xl  mr-8 animate_animated animate_heartBeat ">
+                  <h1 className="  text-green-500 font-bold text-4xl  mr-8 animate_animated mb-6 animate_heartBeat ">
                     <span className='text-5xl'> C</span>onsulting 
                   </h1>
                 </div>
