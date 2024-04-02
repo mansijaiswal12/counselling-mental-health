@@ -89,7 +89,7 @@ const Home = () => {
            </div>
 
            <div className="flex justify-center mt-10 mb-5"> 
-          <button className="border-2 border-black bg-[#22C55E] py-3 px-4 rounded-lg font-bold  text-black-900" id="allbtn">Book Appointment Now</button>
+          <NavLink to="/contactus"><button className="border-2 border-black bg-[#22C55E] py-3 px-4 rounded-lg font-bold  text-black-900" id="allbtn">Book Appointment Now</button></NavLink>
           </div>
 
       {/* <div className='flex justify-center mt-3'>
