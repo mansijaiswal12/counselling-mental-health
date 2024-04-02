@@ -1,10 +1,17 @@
 import React from 'react'
 import goals from '../assets/img/goals.jpg'
 import { NavLink } from 'react-router-dom'
-
+import { motion } from "framer-motion";
 const Aboutus = () => {
   return (
-    <>
+    <motion.main
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1}}
+    transition={{
+      duration: 0.8,
+      delay: 0.5,
+      easeIn: [0, 0.71, 0.2, 1.01]
+    }}>
       <div className=" flex justify-center flex-wrap bg-[#b0e2e6]  py-10 sm:mr-8 sm:ml-8">
         <h1 className=" flex justify-center text-3xl font-bold md:text-4xl  flex-wrap  flex-wfont-semibold
           "  >
@@ -47,7 +54,7 @@ const Aboutus = () => {
 
           
       
-    </>
+          </motion.main>
   )
 }
 
