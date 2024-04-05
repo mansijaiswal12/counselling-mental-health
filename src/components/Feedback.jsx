@@ -11,6 +11,7 @@ export default function FeedbackForm() {
   const [comments, setcomments] = useState("");
   const [rating, setrating] = useState(0);
   const [therapyNames, settherapyNames] = useState([]);
+  const [loading, setloading] = useState()
 
   const handleOptionChange = (option) => {
     if (therapyNames.includes(option)) {
@@ -27,6 +28,21 @@ export default function FeedbackForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, comments, rating, therapyNames);
+    const nameRegex =/^[a-zA-Z]+$/
+    
+    if(name.length> 50){
+      setloading(false)
+      return toast.error("Name should maximum 50 characters")
+    }
+    if(name.length<=3){
+     setloading(false)
+     return toast.error("name should minimum 3 characters")
+
+    }
+    if(!name.match(nameRegex)){
+      setloading(false)
+      return toast.error("name must contain only letter")
+    }
 
     axios.post(`${link}/feedback`, { name, comments, rating, therapyNames })
       .then((result) => {
@@ -69,29 +85,6 @@ export default function FeedbackForm() {
                 />
               </div>
             </div>
-
-            <div className='ms-3 me-3'>
-              <label htmlFor="comment" className="block text-lg font-bold ms-3 leading-6 text-gray-900">
-                Comments
-              </label>
-              <div className="mt-2">
-                <input
-                  type="text"
-                  id="comment"
-                  autoComplete="off"
-                  name="comment"
-                  value={comments}
-                  onChange={(e) => {
-                    setcomments(e.target.value);
-                    
-                  }}
-                  required
-
-                  className="block w-full rounded-md border-0 py-1.5  px-2 font-bold text-gray-900 shadow-sm ring-2 ring-inset  ring-green-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-
             <div className="ms-3 me-3" >
               <label className="block text-lg font-bold leading-6 text-gray-900">
                 Therapy Name
@@ -137,11 +130,39 @@ export default function FeedbackForm() {
             </div>
 
 
+
+
+
+            <div className='ms-3 me-3'>
+              <label htmlFor="comment" className="block text-lg font-bold ms-3 leading-6 text-gray-900">
+                Suggestions
+              </label>
+              <div className="mt-2">
+                <textarea
+                  type="text"
+                  id="comment"
+                  autoComplete="off"
+                  name="comment"
+                  value={comments}
+                  onChange={(e) => {
+                    setcomments(e.target.value);
+                    
+                  }}
+                  required
+
+                  className="block w-full rounded-md border-0 py-1.5  px-2 font-bold text-gray-900 shadow-sm ring-2 ring-inset  ring-green-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+
+            
+
+
             <div className='ms-3 me-3' >
-              <label htmlFor="rating" className="block text-lg font-bold leading-6 text-gray-900 text-center">
+              <label htmlFor="rating" className="block text-lg font-bold my-3 leading-6 text-gray-900 text-center">
                 Rating 
               </label>
-              <div className="flex justify-center">
+              <div className="flex justify-center ">
                 <Star filled={rating >=1} onclick={() => handleRatingChange(1)}/>
                 <Star filled={rating >=2} onclick={() => handleRatingChange(2)}/>
                 <Star filled={rating >=3} onclick={() => handleRatingChange(3)}/>

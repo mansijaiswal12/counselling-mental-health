@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 const link = "https://counselling-mental-health-backend.onrender.com"
 
 export default function ContactForm() {
@@ -9,9 +10,27 @@ export default function ContactForm() {
   const [email, setemail] = useState("");
   const [date, setdate] = useState("");
   const [time, settime] = useState("");
+  
+  
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const nameRegex =/^[a-zA-Z]+$/
+    
+    if(name.length> 20 || name.length < 3){
+      return toast.error("Name should be between 3 to 20 characters")
+    }
+   
+    if(!name.match(nameRegex)){
+      
+      return toast.error("name must contain only letter")
+    }
+
+    if(mobileno.length< 10 || mobileno.length >12){
+      return toast.error("no shoube 10 to 12 digit")
+    }
     console.log(name, mobileno, email, date, time);
     axios
       .post(`${link}/contactus`, {
@@ -24,9 +43,17 @@ export default function ContactForm() {
       .then((result) => {
         console.log(result);
         toast.success("successfully submited");
+        setname("")
+        setemail("")
+        setmobno("")
+        setdate("")
+        settime("")
+        navigate('/submit')
+
       })
       .catch((err) => console.log(err));
   };
+  
   return (
     <main className="bgimage">
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -39,8 +66,8 @@ export default function ContactForm() {
           }}
           id="contact"
         >
-          <h2 className="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
-            Contact Us
+          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+            Book-Appointment
           </h2>
 
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -95,10 +122,12 @@ export default function ContactForm() {
                   <input
                     id="number"
                     name="number"
-                    type="text"
+                    type="number"
                     value={mobileno}
                     onChange={(e) => setmobno(e.target.value)}
                     required
+                    minLength="10"
+                    maxLength="12"
                     className="block px-2 font-bold w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset ring-green-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6"
                   />
                 </div>
