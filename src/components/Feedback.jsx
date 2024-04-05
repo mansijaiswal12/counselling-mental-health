@@ -4,6 +4,7 @@ import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Star from "./Star";
+import { useNavigate } from "react-router-dom";
 const link = 'https://counselling-mental-health-backend.onrender.com'
 
 export default function FeedbackForm() {
@@ -11,7 +12,8 @@ export default function FeedbackForm() {
   const [comments, setcomments] = useState("");
   const [rating, setrating] = useState(0);
   const [therapyNames, settherapyNames] = useState([]);
-  // const [loading, setloading] = useState()
+  const navigate = useNavigate()
+ 
 
   const handleOptionChange = (option) => {
     if (therapyNames.includes(option)) {
@@ -48,6 +50,12 @@ export default function FeedbackForm() {
       .then((result) => {
         console.log(result);
         toast.success("Thank you for your feedback");
+        setname("")
+        setcomments("")
+        settherapyNames("")
+        setrating("")
+        navigate("/feedbacksubmit")
+
       })
       .catch((err) => {
         console.error("Error submitting feedback:", err);

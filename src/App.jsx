@@ -13,6 +13,8 @@ import 'animate.css'
 import Exploreoverthinking from './components/Exploreoverthinking'
 import Exploredepression from './components/Exploredepression'
 import Submit from './components/Submit'
+import FeedbackForm from './components/Feedback'
+import Feedbacksubmit from './components/Feedbacksubmit'
 
 
 
@@ -35,6 +37,7 @@ const App = () => {
         <Route path='/exploroverthinking' element={<Exploreoverthinking/>}/>
         <Route path='/exploredepression' element={<Exploredepression/>}/>
         <Route path='/submit' element={<Submit/>}/>
+        <Route path='/feedbacksubmit' element={<Feedbacksubmit/>}/>
        
          
        
