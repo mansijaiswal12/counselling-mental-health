@@ -26,3 +26,12 @@ background: rgb(80, 229, 229);
     background-position: center;
     opacity: 1;
 }
+.bgsubmit{
+    background:url("../src/assets/img/contact\ bg\ img.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 2rem;
+    opacity:1;
+  ;
+    
+}
