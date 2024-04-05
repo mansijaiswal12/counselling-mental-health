@@ -11,7 +11,7 @@ export default function FeedbackForm() {
   const [comments, setcomments] = useState("");
   const [rating, setrating] = useState(0);
   const [therapyNames, settherapyNames] = useState([]);
-  const [loading, setloading] = useState()
+  // const [loading, setloading] = useState()
 
   const handleOptionChange = (option) => {
     if (therapyNames.includes(option)) {
@@ -31,16 +31,16 @@ export default function FeedbackForm() {
     const nameRegex =/^[a-zA-Z]+$/
     
     if(name.length> 50){
-      setloading(false)
+     
       return toast.error("Name should maximum 50 characters")
     }
     if(name.length<=3){
-     setloading(false)
+    
      return toast.error("name should minimum 3 characters")
 
     }
     if(!name.match(nameRegex)){
-      setloading(false)
+     
       return toast.error("name must contain only letter")
     }
 
