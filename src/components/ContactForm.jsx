@@ -17,7 +17,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const nameRegex =/^[a-zA-Z]+$/
+    const nameRegex =/^[a-zA-Z\s]+$/
     
     if(name.length> 20 || name.length < 3){
       return toast.error("Name should be between 3 to 20 characters")
